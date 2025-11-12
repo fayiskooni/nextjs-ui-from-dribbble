@@ -3,7 +3,7 @@ import { Check, Ellipsis } from "lucide-react";
 
 const ProfileCard = () => {
   return (
-    <div className="relative">
+    <div className="relative bg-white">
       <div className="flex items-center justify-between m-5">
         <p className="text-xs font-semibold">Profile</p>
         <Ellipsis />
