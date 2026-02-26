@@ -21,29 +21,27 @@ const HobbyCard = () => {
   };
 
   return (
-    <div className="bg-[#e5f048] rounded-3xl h-full grid grid-rows-[3fr_7fr] pl-8 pr-8 pb-6">
-      {/* Row 1 */}
-      <div className="text-sm font-bold flex items-end pb-3 mt-5">
+    <div className="bg-[#e5f048] rounded-3xl h-full flex flex-col p-4 md:p-6 shadow-sm overflow-hidden">
+      <div className="text-sm md:text-base font-bold pb-2 md:pb-4">
         Choose your interests
       </div>
 
-      {/* Row 2 */}
-      <div className="flex flex-wrap gap-2 text-sm items-start content-start">
+      <div className="flex flex-wrap gap-2 md:gap-2.5 text-xs md:text-sm flex-1 content-start mt-2">
         {interests.map((interest) => (
           <button
             key={interest}
             onClick={() => toggleInterest(interest)}
             className={`
-              px-4 py-1.5 rounded-full font-medium border-2 
-              transition-all duration-200
+              px-3 md:px-4 py-1.5 md:py-2 rounded-full font-medium border-2 
+              transition-all duration-200 whitespace-nowrap
               ${
                 selected.includes(interest)
                   ? "bg-black text-white border-black"
-                  : "bg-transparent text-black border-black hover:bg-black/5"
+                  : "bg-transparent text-black border-black hover:bg-black/10"
               }
             `}
           >
-            <span className="mr-1.5">
+            <span className="mr-1 md:mr-1.5">
               {selected.includes(interest) ? "✓" : "+"}
             </span>
             {interest}

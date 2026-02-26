@@ -3,25 +3,20 @@ import React from "react";
 
 const RevenueCard = () => {
   return (
-    <div className="grid grid-rows-[5fr_1_4fr] h-full bg-white rounded-3xl">
-      {/* Row 1  */}
-      <div className="flex items-center justify-center">
-        <DollarSign className="h-20 w-20 bg-red-500 text-red-200 rounded-full border-15 border-red-200" />
+    <div className="flex flex-col justify-between h-full bg-white rounded-3xl p-6 md:p-8 shadow-sm">
+      <div className="flex items-center justify-center flex-1">
+        <DollarSign className="h-20 w-20 md:h-24 md:w-24 bg-red-500 text-red-100 rounded-full border-[12px] md:border-[16px] border-red-100 pt-1 md:pt-2" strokeWidth={3} />
       </div>
 
-      {/* Row 2  */}
-      <div className="flex items-center justify-center text-sm text-gray-500">
+      <div className="flex items-center justify-center text-xs md:text-sm text-gray-500 mt-6 mb-2">
         Estimated Revenue
       </div>
 
-      {/* Row 3  */}
-      <div className="flex flex-col items-center justify-center">
-        <p className="text-5xl font-bold">$10M</p>
-        <div className="flex items-center text-green-800 bg-green-100 p-1 rounded-2xl">
-            <ArrowUpRight size={16} />
-          <p>
-            $615K
-          </p>
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-2 md:gap-4 lg:items-end">
+        <p className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-none">$10M</p>
+        <div className="flex items-center text-green-800 bg-green-100 px-2 py-1 md:px-3 md:py-1.5 rounded-full text-xs md:text-sm font-medium whitespace-nowrap lg:mb-1">
+          <ArrowUpRight size={16} className="mr-1" />
+          <p>$615K</p>
         </div>
       </div>
     </div>

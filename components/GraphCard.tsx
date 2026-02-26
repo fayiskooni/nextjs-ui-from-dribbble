@@ -35,12 +35,12 @@ const chartConfig = {
 
 const GraphCard = () => {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Stats</CardTitle>
-        <CardDescription>+35%</CardDescription>
+    <Card className="w-full h-full flex flex-col justify-between border-0 shadow-sm rounded-3xl">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-lg md:text-xl">Stats</CardTitle>
+        <CardDescription className="text-xs md:text-sm font-medium text-green-500">+35%</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-1 min-h-0 pb-4">
         <ChartContainer config={chartConfig}>
           <LineChart
             accessibilityLayer
